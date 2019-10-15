@@ -16,4 +16,6 @@ public abstract class Component {
     public String getModel(){
         return this.model;
     }
+
+    public abstract String play(String item);
 }

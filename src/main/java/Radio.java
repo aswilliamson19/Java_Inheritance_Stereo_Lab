@@ -4,5 +4,7 @@ public class Radio extends Component{
         super(make, model);
     }
 
-
+    public String play(String item) {
+        return "You are tuning into " + item;
+    }
 }

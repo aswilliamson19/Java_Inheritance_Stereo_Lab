@@ -9,4 +9,8 @@ public class Stereo {
         this.radio = radio;
         this.cdPlayer = cdPlayer;
     }
+
+    public String playComponent(Component component, String item){
+        return component.play(item);
+    }
 }

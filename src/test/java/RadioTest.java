@@ -21,4 +21,9 @@ public class RadioTest {
     public void hasModel(){
         assertEquals("Anthracite", radio.getModel());
     }
+
+    @Test
+    public void canTune(){
+        assertEquals("You are tuning into Radio One", radio.play("Radio One"));
+    }
 }
