@@ -22,4 +22,26 @@ public class StereoTest {
     public void canPlayARadio(){
         assertEquals("You are tuning into Radio One", stereo.playComponent(radio, "Radio One"));
     }
+
+    @Test
+    public void canPlayCassette(){
+        assertEquals("The cassette is playing The Rolling Stones", stereo.playComponent(cassettePlayer, "The Rolling Stones"));
+    }
+
+    @Test
+    public void canPlayCD(){
+        assertEquals("The CD is playing The Rolling Stones", stereo.playComponent(cdPlayer, "The Rolling Stones"));
+    }
+
+    @Test
+    public void canRaiseVolume(){
+        stereo.raiseVolume(10);
+        assertEquals(20, stereo.getVolume());
+    }
+
+    @Test
+    public void canLowerVolume(){
+        stereo.lowerVolume(5);
+        assertEquals(5, stereo.getVolume());
+    }
 }
