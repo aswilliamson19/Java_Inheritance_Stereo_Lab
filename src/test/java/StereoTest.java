@@ -15,7 +15,7 @@ public class StereoTest {
         radio = new Radio("Roksan", "Anthracite");
         cassettePlayer = new CassettePlayer("Sony", "V3");
         cdPlayer = new CDPlayer("Phillips", "XPTO");
-        stereo = new Stereo(radio, cassettePlayer, cdPlayer);
+        stereo = new Stereo("Stereo1", radio, cassettePlayer, cdPlayer);
     }
 
     @Test
@@ -43,5 +43,10 @@ public class StereoTest {
     public void canLowerVolume(){
         stereo.lowerVolume(5);
         assertEquals(5, stereo.getVolume());
+    }
+
+    @Test
+    public void canConnect(){
+        assertEquals("I am connected to Stereo1", stereo.connect());
     }
 }

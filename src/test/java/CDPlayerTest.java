@@ -21,4 +21,10 @@ public class CDPlayerTest {
     public void hasModel(){
         assertEquals("Anthracite", cdPlayer.getModel());
     }
+
+    @Test
+    public void canSwitchCDs(){
+        cdPlayer.switchCD("Beatles Greatest Hits");
+        assertEquals("Beatles Greatest Hits", cdPlayer.getCdPlaying());
+    }
 }
